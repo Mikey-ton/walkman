@@ -1,0 +1,369 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Главная секция (hero) */
+main {
+    background-color: #f0f0f0;
+}
+main section {
+    padding: 60px 0;
+}
+
+.hero {
+    background-color: #fff;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.price-container {
+    margin-bottom: 20px;
+}
+
+
+.hero-image {
+  width: 45%;
+   text-align: right;
+}
+
+.hero-image img {
+   max-width: 100%;
+   height: auto;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Секция "Что мы делаем" */
+.services {
+    background-color: #fff;
+}
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+}
+.service-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+.service-item p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Секция "Токеномика" */
+.tokenomics {
+    background-color: #fff;
+}
+.tokenomics h2 {
+   text-align: center;
+   margin-bottom: 40px;
+    font-size: 2.2em;
+}
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.tokenomics-item {
+    text-align: center;
+   padding: 20px;
+}
+.tokenomics-item h3 {
+   margin-bottom: 10px;
+   font-size: 1.4em;
+}
+/* Секция "Дорожная карта" */
+.roadmap {
+    background-color: #eee;
+}
+.roadmap h2 {
+   text-align: center;
+   margin-bottom: 40px;
+   font-size: 2.2em;
+}
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.roadmap-item {
+   padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.roadmap-item ul {
+  padding-left: 20px;
+}
+.roadmap-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+/* Секция "Команда" */
+.team {
+     background-color: #fff;
+}
+.team h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.team-item {
+    text-align: center;
+}
+.team-item img {
+    max-width: 150px;
+   border-radius: 50%;
+    margin-bottom: 10px;
+}
+.team-item h3{
+   margin-bottom: 10px;
+    font-size: 1.4em;
+}
+.team-item p{
+     color: #555;
+}
+/* Секция "Портфолио" */
+.portfolio {
+    background-color: #f0f0f0;
+}
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.portfolio-item-overlay h3 {
+    color: #fff;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.portfolio-item-overlay a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover .portfolio-item-overlay{
+   opacity: 1;
+}
+/* Секция "Купить" */
+.buy {
+   background-color: #fff;
+}
+.buy h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+.buy p{
+   margin-bottom: 20px;
+   text-align: center;
+}
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Анимация при скролле */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
